@@ -17,7 +17,7 @@ jinwoo@MacBook-Pro homework1 % bash run_docker.sh
 root@9f963f7291fd:/homework1#
 ```
 
-Can you see what just happened? Your Docker engine built our Dockerfile, ran a container, and finally entered it. You can check this by seeing that the username (i.e., root) and hostname (9f963f7291fd) are different from that of your original host.
+Can you see what just happened? Your Docker engine built a Docker image through reading Dockerfile, ran a container, and finally entered it. You can check this by seeing that the username (i.e., root) and hostname (9f963f7291fd) are different from that of your host's.
 
 
 ## Task1: Implementing Basic TCP Client-Server
