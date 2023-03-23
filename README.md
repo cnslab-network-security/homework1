@@ -35,6 +35,10 @@ You can see the same files of this directory at the container-side as well.
 
 ## Some Useful Tools
 
+In this lab, I assume that you're familiar with Linux systems. Those who don't know Linux commands can refer to [here](https://www.guru99.com/linux-commands-cheat-sheet.html).
+
+For this lab, you may need to use following tools:
+
 ### tmux
 
 When you do network programming, you may want to split a terminal into several windows to run programs there individually. For this purpose, you can simply type `tmux` after running a Docker container, and then you will see a new tmux terminal. There are many useful tmux commands, but it's enough to use the followings:
@@ -50,7 +54,7 @@ For more information, please refer to [here](https://gist.github.com/MohamedAlaa
 
 ### tcpdump
 
-While doing this lab, you may want to see how packets are exchanged. `tcpdump` is a popular command line utility for capturing packets. You can simply type:
+When testing some programs, you may want to see how actual packets look like and how they are exchanged. You can use `tcpdump`, a popular command line utility for capturing packets in Linux. You can simply type:
 
 ```
 $ tcpdump -i lo -n
