@@ -31,7 +31,7 @@ Dockerfile  README.md  run_docker.sh  init_docker.sh  task1  task2  task3
 
 You can see the same files of this directory at the container-side as well.
 
-Note: I strongly recommend that you implement and test your programs in the given Docker container. If you do so in your OS (e.g., Windows), some unexpected problems may occur when running your program in the container.
+**Note**: I strongly recommend that you implement and test your programs in the given Docker container. If you do so in your OS (e.g., Windows), some unexpected problems may occur when running your program in the container.
 
 ## Some Useful Tools
 
