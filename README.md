@@ -7,7 +7,7 @@ In this lab, we will implement basic network programs (especially TCP client-ser
 
 ## Due Date: April XX
 
-# Installing and Running Docker
+## Installing and Running Docker
 
 To run the same environment across different OSes (i.e., Windows, macOS), we'll use Docker, a lightweight virtualization platform. For this, you first need to install Docker. The easiest way is to install Docker Desktop, which can be downloaded from [here](https://www.docker.com/products/docker-desktop/). You will need to choose a suitable binary according to your OS and hardware architecture. For example, I need to install the Docker Desktop built for Apple Chip because my laptop is m1 MacBook. 
 
@@ -22,14 +22,16 @@ root@9f963f7291fd:/homework1#
 
 What just happened? Your Docker engine built a Docker image through reading Dockerfile, ran a container, and finally entered it. You can check this by seeing that the username (i.e., root) and hostname (9f963f7291fd) are different from that of your host's.
 
-It's important to note that a container is an isolated environment similar to a virtual machine (VM), so writing/removing a certain file won't affect your host directory. However, we often want to write a program from a host-side using IDEs, such as Pycharm and VSCode. For this, I made this directory transparent to the container, so if you make a change from the host side, it will be reflected from the container-side immediately. You can check this by typing the `ls` command as follows:
+It's important to note that a container is an isolated environment similar to a virtual machine (VM), so writing/removing a certain file won't affect your host directory. However, we often want to write a program from a host-side using IDEs, such as [Pycharm](https://www.jetbrains.com/ko-kr/pycharm/) and [VSCode](https://code.visualstudio.com/). For this, I made this directory transparent to the container, so if you make a change from the host side, it will be reflected from the container-side immediately. You can check this by typing the `ls` command as follows:
 
 ```
 root@a95a45a58379:/homework1# ls
 Dockerfile  README.md  run_docker.sh  init_docker.sh  task1  task2  task3
 ```
 
-As noted, you can see the same files of this directory at the container-side as well.
+You can see the same files of this directory at the container-side as well.
+
+Note: I strongly recommend that you implement and test your programs in the given Docker container. If you do so in your OS (e.g., Windows), some unexpected problems may occur when running your program in the container.
 
 ## Some Useful Tools
 
