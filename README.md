@@ -2,6 +2,9 @@
 
 In this lab, we will implement basic network programs (especially TCP client-server model) and some well-known network scanners, such as UDP scanner and traceroute. As previously mentioned, we will use Python 3 in order to quickly build and run network applications.
 
+[Prerequisite: Installing and Running Docker] (## Prerequisite: Installing and Running Docker)
+[Prerequisite: Some Useful Tools] (## Prerequisite: Some Useful Tools)
+
 ## Due Date: April XX
 
 ## Prerequisite: Installing and Running Docker
@@ -19,7 +22,7 @@ root@9f963f7291fd:/homework1#
 
 What just happened? Your Docker engine built a Docker image through reading Dockerfile, ran a container, and finally entered it. You can check this by seeing that the username (i.e., root) and hostname (9f963f7291fd) are different from that of your host's.
 
-It's important to note that a container is an isolated environment similar to a virtual machine (VM), so writing/removing a certain file won't affect your host directory. However, we often want to write a program from a host-side using IDEs, such as Pycharm and VSCode. For this, I made this directory transparent to the container, so if you make a change from the host side, it will be reflected the container side immediately. You can check this by typing the `ls` command as follows:
+It's important to note that a container is an isolated environment similar to a virtual machine (VM), so writing/removing a certain file won't affect your host directory. However, we often want to write a program from a host-side using IDEs, such as Pycharm and VSCode. For this, I made this directory transparent to the container, so if you make a change from the host side, it will be reflected from the container-side immediately. You can check this by typing the `ls` command as follows:
 
 ```
 root@a95a45a58379:/homework1# ls
