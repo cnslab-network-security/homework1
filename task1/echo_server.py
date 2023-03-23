@@ -5,7 +5,7 @@ PORT = 9999
 BUF_SIZE = 4096
 
 #TODO: make a server-socket
-server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1) # To make the port number reusable
+server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 #TODO: bind the IP, port number to the server-socket
 server.bind((IP, PORT))
 #TODO: make the socket a listening state
