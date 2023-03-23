@@ -68,7 +68,7 @@ The above command will capture and display all packets involved the interface `l
 
 ### vi
 
-`vi` is a popular editor included by default on Linux operating systems. You can simply type:
+`vi` is a popular editor included by default on Linux operating systems. For example, you can simply type:
 
 ```
 $ vi server.py
@@ -76,4 +76,4 @@ $ vi server.py
 
 to create a python file named `server.py` and start editing.
 
-If you feel that vi is inconvinient, you can use other editors and IDEs as well, such as [Sublime Text](https://www.sublimetext.com/), VSCode, and pyCharm.
+If you feel that `vi` is inconvinient, you can use other editors and IDEs as well, such as [Sublime Text](https://www.sublimetext.com/), VSCode, and pyCharm.
