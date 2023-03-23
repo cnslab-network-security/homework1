@@ -6,11 +6,6 @@ In this lab, we will implement basic network programs (especially TCP client-ser
 
 This repository has four subdirectories, each of which corresponds to an individual task. Please read the following decriptions carefully before you start this lab.
 
-## Table of Contents
-
-* [Installing and Running Docker](#installing-and-running-docker)
-* [Some Useful Tools](#some-useful-tools)
-
 ## Installing and Running Docker
 
 To run the same environment across different OSes (i.e., Windows, macOS), we'll implement and test our programs on a Docker container, a lightweight virtualization platform. The easiest way of using Docker at any OS is to install Docker Desktop, which can be downloaded from [here](https://www.docker.com/products/docker-desktop/). You will need to choose a suitable binary according to your OS and hardware architecture. For example, I installed the Docker Desktop built for Apple Chip because my laptop is m1 MacBook. 
