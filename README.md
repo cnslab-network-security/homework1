@@ -9,7 +9,7 @@ In this lab, we will implement basic network programs (especially TCP client-ser
 
 ## Installing and Running Docker
 
-To run the same environment across different OSes (i.e., Windows, macOS), we'll use Docker, a lightweight virtualization platform. For this, you first need to install Docker. The easiest way is to install Docker Desktop, which can be downloaded from [here](https://www.docker.com/products/docker-desktop/). You will need to choose a suitable binary according to your OS and hardware architecture. For example, I need to install the Docker Desktop built for Apple Chip because my laptop is m1 MacBook. 
+To run the same environment across different OSes (i.e., Windows, macOS), we'll use Docker, a lightweight virtualization platform. For this, you first need to install Docker. The easiest way is to install Docker Desktop, which can be downloaded from [here](https://www.docker.com/products/docker-desktop/). You will need to choose a suitable binary according to your OS and hardware architecture. For example, I installed the Docker Desktop built for Apple Chip because my laptop is m1 MacBook. 
 
 Once you install Docker Desktop and run it, you will be able to use Docker commands. You can check this by openning terminal and type `docker -v`. For example, in Windows, you can use PowerShell. In macOS, you can use the terminal app or iTerm2. If you see that the terminal prints a Docker version, you're now prepared to run our Dockerfile.
 
@@ -35,9 +35,9 @@ You can see the same files of this directory at the container-side as well.
 
 ## Some Useful Tools
 
-In this lab, I assume that you're familiar with Linux systems. Those who don't know Linux commands can refer to [here](https://www.guru99.com/linux-commands-cheat-sheet.html).
+In this lab, I assume that you're familiar with Linux systems. But, those who're NOT familar with Linux systems can refer to [here](https://www.guru99.com/linux-commands-cheat-sheet.html) to look at some important commands.
 
-For this lab, you may need to use following tools:
+Alos, you may need to utilize following tools for this lab:
 
 ### tmux
 
@@ -54,13 +54,25 @@ For more information, please refer to [here](https://gist.github.com/MohamedAlaa
 
 ### tcpdump
 
-When testing some programs, you may want to see how actual packets look like and how they are exchanged. You can use `tcpdump`, a popular command line utility for capturing packets in Linux. You can simply type:
+When testing network programs, you may want to see how actual packets look like and how they are exchanged. You can use `tcpdump`, a popular command line utility for capturing packets in Linux. You can simply type:
 
 ```
 $ tcpdump -i lo -n
 ```
 
 The above command will capture and display all packets involved the interface `lo` whose IP address is "127.0.0.1".
+
+### vi
+
+`vi` is a popular editor included by default on Linux operating systems. You can simply type:
+
+```
+$ vi server.py
+```
+
+to create a python file named `server.py` and start editing.
+
+If you feel that vi is inconvinient, you can use other editors and IDEs, such as [Sublime Text](https://www.sublimetext.com/), VSCode, and pyCharm.
 
 ## Task 1: Implementing Echo Client-Server
 
