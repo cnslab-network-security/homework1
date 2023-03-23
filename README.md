@@ -13,7 +13,7 @@ This repository has four subdirectories, each of which corresponds to an individ
 
 ## Installing and Running Docker
 
-To run the same environment across different OSes (i.e., Windows, macOS), we'll use Docker, a lightweight virtualization platform. For this, you first need to install Docker. The easiest way is to install Docker Desktop, which can be downloaded from [here](https://www.docker.com/products/docker-desktop/). You will need to choose a suitable binary according to your OS and hardware architecture. For example, I installed the Docker Desktop built for Apple Chip because my laptop is m1 MacBook. 
+To run the same environment across different OSes (i.e., Windows, macOS), we'll implement and test our programs on a Docker container, a lightweight virtualization platform. The easiest way of using Docker at any OS is to install Docker Desktop, which can be downloaded from [here](https://www.docker.com/products/docker-desktop/). You will need to choose a suitable binary according to your OS and hardware architecture. For example, I installed the Docker Desktop built for Apple Chip because my laptop is m1 MacBook. 
 
 Once you install Docker Desktop and run it, you will be able to use Docker commands. You can check this by openning terminal and type `docker -v`. For example, in Windows, you can use PowerShell. In macOS, you can use the terminal app or iTerm2. If you see that the terminal prints a Docker version, you're now prepared to run our Dockerfile.
 
