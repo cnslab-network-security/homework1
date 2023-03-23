@@ -13,6 +13,6 @@ If you write code properly, the programs will be working as follows:
 4. Type any string you want to send to server from the client.
 5. Check that the string is printed out from the server correctly.
 
-## Write-up
+## Writing-up
 
 When writing a report, breifly describe how your program work.
