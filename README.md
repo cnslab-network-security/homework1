@@ -28,8 +28,10 @@ Dockerfile  README.md  run_docker.sh  task1  task2  task3
 
 As noted, you can see the same files of this directory at the container-side as well.
 
+## Task 1: Implementing Echo Client-Server
 
+In our class, we have learned that a basic TCP client-server model can be easily implemented with Python.
 
-## Task1: Implementing Basic TCP Client-Server
+## Task 2: Implementing Toy Honeypot
 
-- In our class, we have learned that 
+## Task 3: Implementing Port Scanner
