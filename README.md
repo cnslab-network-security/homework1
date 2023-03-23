@@ -2,12 +2,12 @@
 
 In this lab, we will implement basic network programs (especially TCP client-server model) and some well-known network scanners, such as UDP scanner and traceroute. As previously mentioned, we will use Python 3 in order to quickly build and run network applications.
 
-* [Prerequisite: Installing and Running Docker](#prerequisite-installing-and-running-docker)
-* [Prerequisite: Some Useful Tools](#Prerequisite:-Some-Useful-Tools)
+* [Prerequisite: Installing and Running Docker](#installing-and-running-docker)
+* [Prerequisite: Some Useful Tools](#some-useful-tools)
 
 ## Due Date: April XX
 
-# Prerequisite: Installing and Running Docker
+# Installing and Running Docker
 
 To run the same environment across different OSes (i.e., Windows, macOS), we'll use Docker, a lightweight virtualization platform. For this, you first need to install Docker. The easiest way is to install Docker Desktop, which can be downloaded from [here](https://www.docker.com/products/docker-desktop/). You will need to choose a suitable binary according to your OS and hardware architecture. For example, I need to install the Docker Desktop built for Apple Chip because my laptop is m1 MacBook. 
 
@@ -31,7 +31,7 @@ Dockerfile  README.md  run_docker.sh  init_docker.sh  task1  task2  task3
 
 As noted, you can see the same files of this directory at the container-side as well.
 
-## Prerequisite: Some Useful Tools
+## Some Useful Tools
 
 ### tmux
 
