@@ -7,4 +7,4 @@ If you write a code properly, the programs will be working as follows:
 1. Run `echo_server.py`
 2. Run `echo_client.py`
 3. Type any string you want to send to server from a client side.
-4. Check that the string is printed out from the server side.
+4. Check that the string is printed out from the server side correctly.
