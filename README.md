@@ -7,7 +7,7 @@ In this lab, we will implement basic network programs (especially TCP client-ser
 
 ## Due Date: April XX
 
-## Prerequisite: Installing and Running Docker
+# Prerequisite: Installing and Running Docker
 
 To run the same environment across different OSes (i.e., Windows, macOS), we'll use Docker, a lightweight virtualization platform. For this, you first need to install Docker. The easiest way is to install Docker Desktop, which can be downloaded from [here](https://www.docker.com/products/docker-desktop/). You will need to choose a suitable binary according to your OS and hardware architecture. For example, I need to install the Docker Desktop built for Apple Chip because my laptop is m1 MacBook. 
 
