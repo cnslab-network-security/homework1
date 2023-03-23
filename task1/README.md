@@ -2,7 +2,7 @@
 
 In our class, we have learned that a basic TCP client-server model can be easily implemented with Python. This is the good starting point for learning how to implement a socket program. The `task1` directory has `echo_server.py` and `echo_client.py` where some code snippets are already written. Fill the rest of the code where the `TODO:` is commented in order to make them working properly.
 
-If you write a code properly, the programs will be working as follows:
+If you write code properly, the programs will be working as follows:
 
 1. Run `echo_server.py`
 2. Run `echo_client.py`
