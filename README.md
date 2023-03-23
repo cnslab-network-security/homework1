@@ -76,10 +76,4 @@ $ vi server.py
 
 to create a python file named `server.py` and start editing.
 
-If you feel that vi is inconvinient, you can use other editors and IDEs, such as [Sublime Text](https://www.sublimetext.com/), VSCode, and pyCharm.
-
-
-
-## Task 2: Implementing Toy Honeypot
-
-## Task 3: Implementing Port Scanner
+If you feel that vi is inconvinient, you can use other editors and IDEs as well, such as [Sublime Text](https://www.sublimetext.com/), VSCode, and pyCharm.
