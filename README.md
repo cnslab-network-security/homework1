@@ -2,8 +2,8 @@
 
 In this lab, we will implement basic network programs (especially TCP client-server model) and some well-known network scanners, such as UDP scanner and traceroute. As previously mentioned, we will use Python 3 in order to quickly build and run network applications.
 
-* [Prerequisite: Installing and Running Docker](#installing-and-running-docker)
-* [Prerequisite: Some Useful Tools](#some-useful-tools)
+* [Installing and Running Docker](#installing-and-running-docker)
+* [Some Useful Tools](#some-useful-tools)
 
 ## Due Date: April XX
 
