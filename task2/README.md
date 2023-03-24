@@ -2,7 +2,7 @@
 
 We have learned that port scanning is one of effective methods to identify which services are currently running on a target host. In this task, you will implement a toy port scanner that scans a certain range of TCP ports for a given host. 
 
-## Programming
+## Requirement
 
 In this directory, `port_scanner.py` is given. This script takes `target_ip`, `start_portno`, `end_portno` as inputs. Thus, if you give the script a target IP address and TCP port range, it performs TCP scanning and prints out open ports. In order to make the script work, replace the `TODO:` comment with your code.
 
