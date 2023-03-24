@@ -18,6 +18,6 @@ When writing a report, please include the answers for the following questions:
 2. If you want to perform UDP scannig instead of TCP, which part of this script should be modified?
 3. If you run tcpdump while performing this task, you will see that if a port is closed, an opposing host will reply with a TCP RST packet. Suppose you send a UDP packet to a closed port on a specific host. Do you think the host will reply with a UDP packet? If not, which packet are you likely to receive?
 
-## Note: Ethical Issue
+## Ethical Issue
 
 Do only test your scanner against your home router, your local host, VMs, and containers. Please do **NOT** test this program against public networks, such as university and cafe. Performing TCP scans indiscriminately could be detected by security devices (e.g., IDS/IPS/firewall), and then your host can be blocked by them.
