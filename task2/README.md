@@ -6,17 +6,17 @@ We have learned that port scanning is one of effective methods to identify which
 
 In this directory, `port_scanner.py` is given. This script takes `target_ip`, `start_portno`, `end_portno` as inputs. Thus, if you give the script a target IP address and TCP port range, it performs TCP scanning and prints out open ports. In order to make the script work, replace the `TODO:` comment with your code.
 
-To test your scanner, you can use  
+To test your scanner, you can give your home router IP address or use the given dummy Docker container. If you execute `run_test_server.sh`, it creates a dummy Ubuntu server and prints out its IP address. Give this IP address to the scanner so that it scans open ports of the dummy server. If your scanner can find 21, 22, 80 open ports, it works well.
 
 Hint: We will simply invoke the `connect()` method for sending a TCP SYN packet. However, it often blocks until a SYN-ACK or RST packet comes from the target, so scanning time will be too long. How can we resolve this situation? Find a hint from [here](https://docs.python.org/ko/3/library/socket.html).
 
 ## Writing-up
 
-When writing a report, include the answers for the following questions:
+When writing a report, please include the answers for the following questions:
 
 1. Describe how your scanner works. Concretely, describe how your logic scans open/closed ports of a target host.
 2. If you want to perform UDP scannig instead of TCP, which part of this script should be modified?
-3.  
+3. If you run tcpdump when doing this task, you will see that an opposite host replies with a TCP RST packet if its port is closed. Suppose that you send an UDP packet to the closed port of a certain host. Do you think the host will reply with a UDP packet as well? Otherwise, which packet do you likely to receive?
 
 ## Note: Ethical Issue
 
