@@ -1,0 +1,32 @@
+version: "3.9"
+services:
+  ubuntu1:
+    image: "ubuntu:jammy"
+    tty: true
+    networks:
+        - network1
+  ubuntu2:
+    image: "ubuntu:jammy"
+    tty: true
+    networks:
+        - network1
+  ubuntu3:
+    image: "ubuntu:jammy"
+    tty: true
+    networks:
+        - network1
+  ubuntu4:
+    image: "ubuntu:jammy"
+    tty: true
+    networks:
+        - network1
+  ubuntu5:
+    image: "ubuntu:jammy"
+    tty: true
+    networks:
+        - network1
+        
+networks:
+    network1:
+        name: cs3864_net
+        external: true
