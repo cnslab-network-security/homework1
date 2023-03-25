@@ -89,4 +89,10 @@ If an incoming packet is matched with one of Snort rules, your NIDS must print o
 [detection_date_and_time] [msg] [protocol] [src_ip] [src_port] [direction] [dst_ip] [dst_port]
 ```
 
+# Writing-up
 
+When writing a report, include the answers for the following questions:
+
+1. Describe how your NIDS work and how to implement it.
+2. What method did you use for implementing NIDS efficiently?
+3. Do you think that your NIDS can be used for a large network?

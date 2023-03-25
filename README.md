@@ -72,3 +72,14 @@ $ vi server.py
 to create a python file named `server.py` and start editing.
 
 If you feel that `vi` is inconvenient, you can use other editors and IDEs as well, such as [Sublime Text](https://www.sublimetext.com/), VSCode, and pyCharm.
+
+## Writing-up
+
+You need to write a report to describe how you implement and resolve challenges. Each task has some required questions you need to answer in your report.
+You can use any tool for writing, such as Word and 아래아한글, but you must submit a `.pdf` file, whose name should be `lab1_your_student_number.pdf`.
+
+## Submission
+
+After finishing this lab, you need to compress the **contents** of this directory with your **report** before submission.
+The compressed file should be `lab1_your_student.number.zip`.
+You must submit your file to KLAS.
