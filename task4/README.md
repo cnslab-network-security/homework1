@@ -5,7 +5,7 @@ In our class, we've learned that NIDS (Network Intrusion Detection System) is us
 
 # Requirement
 
-We will develop a simple NIDS that reads a Snort rule file and parses to extract detection policies. For example, if you type the following command:
+We will develop a simple NIDS that reads a Snort rule file and parses it to extract detection policies. For example, if you type the following command:
 
 ```
 $ python3 nids.py test.rules
