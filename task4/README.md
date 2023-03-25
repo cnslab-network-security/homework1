@@ -5,24 +5,37 @@ In our class, we've learned that NIDS (Network Intrusion Detection System) is us
 
 # Requirement
 
-We will develop a simple NIDS that reads a Snort rule file and parses it to extract detection policies. For example, if you type the following command:
+## Overview
+
+We will develop a simple NIDS that reads a Snort rule file and parses it to extract detection policies. 
+It should operates with three steps:
+1. Parse a Snort rule file and generate a rule set
+2. Capture an incoming packet and match it with the rules
+3. Print a message if a packet is matched. 
+
+For example, if you type the following command:
 
 ```
 $ python3 nids.py test.rules
 ```
 
-Then, it should read the rule file `test.rules` and wait for incoming packets to match them with the Snort rules. The rule file contains several Snort rules like following:
+Then, it should read the rule file `test.rules` and wait for incoming packets to match them with the Snort rules. 
+If your NIDS captures a packet and it is matched with a rule set, your NIDS prints out a message like following:
+
+```
+2023/03/25 11:57:03 r1 packet for subnet 192.168.1.0 tcp 10.0.100.2 12345 -> 192.168.1.100 9999
+
+```
+## Parsing Snort Rule
+
+Your first job is to parse a Snort rule file to build a rule set.
+The rule file contains several Snort rules like following:
 
 ```
 alert tcp any any -> 192.168.1.0/24 any (msg:"r1 packet for subnet 192.168.1.0";)
 alert tcp any any -> any 23,25,21 (msg:"r2 packet for Telnet, FTP, and SSH";)
 alert udp any any -> any 10000:20000 (msg:"r3 udp ports from 10000 to 20000";)
-alert tcp any any -> any any (flags:S; msg:"r4 tcp SYN packet";)
-alert tcp any any -> any 80 (content:"GET"; msg:"r5 HTTP GET message";)
-alert tcp any any -> any 22 (content:"/bin/sh"; msg:"r6 remote shell execution";)
-alert udp any any -> 8.8.8.8 53 (msg:"r7 DNS query for Google open resolver";)
-alert icmp any any -> 223.194.1.180 any (itype:8; icode:0; msg:"r8 ping to KWU";)
-alert icmp any any -> any any (itype:8; icode:0; msg:"r9 ping";)
+...
 ```
 
 Each row is a single Snort rule and it consists of two parts: **rule header** and **rule body**. 
@@ -43,11 +56,6 @@ If an incoming packet is matched with one of Snort rules, your NIDS must print o
 
 ```
 [detection_date_and_time] [msg] [protocol] [src_ip] [src_port] [direction] [dst_ip] [dst_port]
-
 ```
 
-The following is an example:
 
-```
-2023/03/25 11:57:03 r1 packet for subnet 192.168.1.0 tcp 10.0.100.2 12345 -> 192.168.1.100 9999
-```
