@@ -27,7 +27,7 @@ alert icmp any any -> any any (itype:8; icode:0; msg:"r9 ping";)
 
 Each row is a single Snort rule and it consists of two parts: **rule header** and **rule body**. 
 
-The **rule header** includes action, protocol, IP addresses, port numbers, and direction of packets. The action indicates how Snort should work when an incoming packet is matched with a certain rule. For example, if the action is `alert`, Snort prints out a message in a console.
+The **rule header** includes action, protocol, IP addresses, port numbers, and direction of packets. The action indicates how Snort should work when an incoming packet is matched with a certain rule. For example, if the action is `alert`, your NIDS should print out a message (specified in `msg` field in the rule body) to a console.
 
 
 The **rule body** defines various options, such as the `msg` that should be printed when matching a rule, and specific packet fields (e.g., flags, itype) and payload (i.e., content).
