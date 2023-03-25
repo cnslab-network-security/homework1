@@ -12,7 +12,9 @@ To run the same environment across different OSes (i.e., Windows, macOS), we'll 
 
 Once you install Docker Desktop and run it, you will be able to use Docker commands. You can check this by opening terminal and type `docker -v`. For example, in Windows, you can use PowerShell. In macOS, you can use the terminal app or iTerm2. If you see that the terminal prints a Docker version, you're now prepared to run our Dockerfile.
 
-This directory contains a shell script file, `run_docker.sh`. Open the terminal and type `bash run_docker.sh`. You should see the following output:
+This directory contains some useful shell script files, such as `build_docker.sh` and `run_docker.sh`. Open the terminal and type `bash build_docker.sh`. It builds a Docker container image by reading `Dockerfile`.
+
+Now type `bash run_docker.sh`. You should see the following output:
 
 ```
 jinwoo@MacBook-Pro homework1 % bash run_docker.sh
