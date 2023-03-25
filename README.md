@@ -10,7 +10,9 @@ This repository has four subdirectories, each of which corresponds to an individ
 
 To run the same environment across different OSes (i.e., Windows, macOS), we'll implement and test our programs on a Docker container, a lightweight virtualization platform. The easiest way of using Docker at any OS is to install Docker Desktop, which can be downloaded from [here](https://www.docker.com/products/docker-desktop/). You will need to choose a suitable binary according to your OS and hardware architecture. For example, I installed the Docker Desktop built for Apple Chip because my laptop is m1 MacBook. 
 
-Once you install Docker Desktop and run it, you will be able to use Docker commands. You can check this by opening terminal and type `docker -v`. For example, in Windows, you can use PowerShell. In macOS, you can use the terminal app or iTerm2. If you see that the terminal prints a Docker version, you're now prepared to run our Dockerfile.
+Important: if you use Windows, you must install **Git Bash** to make the provided bash script work well. Please click [this link](https://git-scm.com/download/win) and install the Git Desktop.
+
+Once you install Docker Desktop and run it, you will be able to use Docker commands. You can check this by opening terminal (i.e., Git Bash if you use Windows) and type `docker -v`. For example, in Windows, you should use Git Bash (I strongly recommend it because PowerShell didn't work well from my experience.). In macOS, you can use the terminal app or iTerm2. If you see that the terminal prints a Docker version, you're now prepared to run our Dockerfile.
 
 This directory contains some useful shell script files, such as `build_docker.sh` and `run_docker.sh`. Open the terminal and type `bash build_docker.sh`. It builds a Docker container image by reading `Dockerfile`.
 
