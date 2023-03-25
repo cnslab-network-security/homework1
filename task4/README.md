@@ -22,7 +22,6 @@ If your NIDS captures a packet and it is matched with a rule set, your NIDS prin
 
 ```
 2023/03/25 11:57:03 r1 packet for subnet 192.168.1.0 tcp 10.0.100.2 12345 -> 192.168.1.100 9999
-
 ```
 ## Parsing Snort Rule
 
