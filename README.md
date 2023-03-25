@@ -4,13 +4,13 @@
 
 In this lab, we will implement basic network programs (especially TCP client-server model) and some well-known network scanners, such as UDP scanner and traceroute. As previously mentioned, we will use Python 3 in order to quickly build and run network applications.
 
-This repository has four subdirectories, each of which corresponds to an individual task. Please read the following decriptions carefully before you start this lab.
+This repository has four subdirectories, each of which corresponds to an individual task. Please read the following descriptions carefully before you start this lab.
 
 ## Installing and Running Docker
 
 To run the same environment across different OSes (i.e., Windows, macOS), we'll implement and test our programs on a Docker container, a lightweight virtualization platform. The easiest way of using Docker at any OS is to install Docker Desktop, which can be downloaded from [here](https://www.docker.com/products/docker-desktop/). You will need to choose a suitable binary according to your OS and hardware architecture. For example, I installed the Docker Desktop built for Apple Chip because my laptop is m1 MacBook. 
 
-Once you install Docker Desktop and run it, you will be able to use Docker commands. You can check this by openning terminal and type `docker -v`. For example, in Windows, you can use PowerShell. In macOS, you can use the terminal app or iTerm2. If you see that the terminal prints a Docker version, you're now prepared to run our Dockerfile.
+Once you install Docker Desktop and run it, you will be able to use Docker commands. You can check this by opening terminal and type `docker -v`. For example, in Windows, you can use PowerShell. In macOS, you can use the terminal app or iTerm2. If you see that the terminal prints a Docker version, you're now prepared to run our Dockerfile.
 
 This directory contains a shell script file, `run_docker.sh`. Open the terminal and type `bash run_docker.sh`. You should see the following output:
 
@@ -34,9 +34,9 @@ You can see the same files of this directory at the container-side as well.
 
 ## Some Useful Tools
 
-In this lab, I assume that you're familiar with Linux systems. But, those who're NOT familar with Linux systems can refer to [here](https://www.guru99.com/linux-commands-cheat-sheet.html) to look at some important commands.
+In this lab, I assume that you're familiar with Linux systems. But, those who're NOT familiar with Linux systems can refer to [here](https://www.guru99.com/linux-commands-cheat-sheet.html) to look at some important commands.
 
-Alos, you may need to utilize following tools for this lab:
+Also, you may need to utilize following tools for this lab:
 
 ### tmux
 
@@ -71,4 +71,4 @@ $ vi server.py
 
 to create a python file named `server.py` and start editing.
 
-If you feel that `vi` is inconvinient, you can use other editors and IDEs as well, such as [Sublime Text](https://www.sublimetext.com/), VSCode, and pyCharm.
+If you feel that `vi` is inconvenient, you can use other editors and IDEs as well, such as [Sublime Text](https://www.sublimetext.com/), VSCode, and pyCharm.

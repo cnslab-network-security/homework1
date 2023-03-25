@@ -1,0 +1,49 @@
+# Task 4: Implementing a simple NIDS
+
+In our class, we've learned that NIDS (Network Intrusion Detection System) is used for detecting malicious traffic in practice and some open-source NIDSs, such as Snort and Zeek. In this task, we will implement a Snort-like NIDS to understand how it works.
+
+
+# Requirement
+
+We will develop a simple NIDS that reads a Snort rule file and parses to extract detection policies. For example, if you type the following command:
+
+```
+$ python3 nids.py test.rules
+```
+
+Then, it reads the rule file `test.rules` and waits for incoming packets to match them with the Snort rules. The rule file contains several Snort rules like following:
+
+```
+alert tcp any any -> 192.168.1.0/24 any (msg:"r1 packet for subnet 192.168.1.0";)
+alert tcp any any -> any 23,25,21 (msg:"r2 packet for Telnet, FTP, and SSH";)
+alert udp any any -> any 10000:20000 (msg:"r3 udp ports from 10000 to 20000";)
+alert tcp any any -> any any (flags:S; msg:"r4 tcp SYN packet";)
+alert tcp any any -> any 80 (content:"GET"; msg:"r5 HTTP GET message";)
+alert tcp any any -> any 22 (content:"/bin/sh"; msg:"r6 remote shell execution";)
+alert udp any any -> 8.8.8.8 53 (msg:"r7 DNS query for Google open resolver";)
+alert icmp any any -> 223.194.1.180 any (itype:8; icode:0; msg:"r8 ping to KWU";)
+alert icmp any any -> any any (itype:8; icode:0; msg:"r9 ping";)
+```
+
+Each row is a single Snort rule and it consists of two parts: rule header and rule body. The rule header includes action, protocol, IP addresses, port numbers, and direction of packets. The action indicates how Snort should work when an incoming packet is matched with a certain rule. For example, if the action is `alert`, Snort prints out a message in a console.
+The rule body defines various options, such as the `msg` that should be printed when matching a rule, and specific packet fields (e.g., flags, itype) and payload (i.e., content).
+It's important to note that except for the `msg` field, others indicate the packet fields. Also, your NIDS should take an action only if both the rule header and rule body are matched. For example, the following rule should be taken when a TCP packet whose destination port is 80 and its payload contains the string "GET".
+
+```
+alert tcp any any -> any 80 (content:"GET"; msg:"r5 HTTP GET message";)
+```
+
+For further information about the Snort rule syntax, please refer to the [Snort official document](https://docs.snort.org/rules/).
+
+If an incoming packet is matched with one of Snort rules, your NIDS must print out a message. The message should follow the following format
+
+```
+[detection_date_and_time] [msg] [protocol] [src_ip] [src_port] [direction] [dst_ip] [dst_port]
+
+```
+
+The following is an example:
+
+```
+2023/03/25 11:57:03 r1 packet for subnet 192.168.1.0 tcp 10.0.100.2 12345 -> 192.168.1.100 9999
+```

@@ -15,7 +15,7 @@ Hint: We will simply invoke the `connect()` method for sending a TCP SYN packet.
 When writing a report, please include the answers for the following questions:
 
 1. Describe how your scanner works. Concretely, describe how your logic scans open/closed ports of a target host.
-2. If you want to perform UDP scannig instead of TCP, which part of this script should be modified?
+2. If you want to perform UDP scanning instead of TCP, which part of this script should be modified?
 3. If you run tcpdump while performing this task, you will see that if a port is closed, an opposing host will reply with a TCP RST packet. Suppose you send a UDP packet to a closed port on a specific host. Do you think the host will reply with a UDP packet? If not, which packet are you likely to receive?
 
 ## Ethical Issue
