@@ -30,8 +30,8 @@ Each row is a single Snort rule and it consists of two parts: **rule header** an
 The **rule header** includes action, protocol, IP addresses, port numbers, and direction of packets. The action indicates how Snort should work when an incoming packet is matched with a certain rule. For example, if the action is `alert`, your NIDS should print out a message (specified in `msg` field in the rule body) to a console.
 
 
-The **rule body** defines various options, such as the `msg` that should be printed when matching a rule, and specific packet fields (e.g., flags, itype) and payload (i.e., content).
-It's important to note that except for the `msg` field, others indicate the packet fields. Also, your NIDS should take an action only if both the rule header and rule body are matched. For example, the following rule should be taken when a TCP packet whose destination port is 80 and its payload contains the string "GET".
+The **rule body** defines various options, such as the message that should be printed and packet details that should be analyzed.
+It's important to note that except for the `msg` field, others indicate specific packet fields (e.g., flags, itype) and payload (i.e., content). Also, your NIDS should take an action only if both the rule header and rule body are matched. For example, the following rule should be taken when a TCP packet whose destination port is 80 and its payload contains the string "GET".
 
 ```
 alert tcp any any -> any 80 (content:"GET"; msg:"r5 HTTP GET message";)
