@@ -5,10 +5,8 @@ In our class, we've learned that NIDS (Network Intrusion Detection System) is us
 
 # Requirement
 
-## Overview
-
 We will develop a simple NIDS that reads a Snort rule file and parses it to extract detection policies. 
-It should operates with three steps:
+It should operate with three steps:
 1. Parse a Snort rule file and generate a rule set
 2. Capture an incoming packet and match it with the rules
 3. Print a message if a packet is matched. 
