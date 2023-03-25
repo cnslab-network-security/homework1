@@ -83,7 +83,7 @@ For more information, see [this document](https://scapy.readthedocs.io/en/latest
 
 ## Printing Messages
 
-If an incoming packet is matched with one of Snort rules, your NIDS must print out a message. The message should follow the following format
+If an incoming packet is matched with one of Snort rules, your NIDS must print out a message. The message should follow the following format.
 
 ```
 [detection_date_and_time] [msg] [protocol] [src_ip] [src_port] [direction] [dst_ip] [dst_port]
