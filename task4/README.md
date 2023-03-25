@@ -11,7 +11,7 @@ We will develop a simple NIDS that reads a Snort rule file and parses it to extr
 $ python3 nids.py test.rules
 ```
 
-Then, it reads the rule file `test.rules` and waits for incoming packets to match them with the Snort rules. The rule file contains several Snort rules like following:
+Then, it should read the rule file `test.rules` and wait for incoming packets to match them with the Snort rules. The rule file contains several Snort rules like following:
 
 ```
 alert tcp any any -> 192.168.1.0/24 any (msg:"r1 packet for subnet 192.168.1.0";)
@@ -25,8 +25,12 @@ alert icmp any any -> 223.194.1.180 any (itype:8; icode:0; msg:"r8 ping to KWU";
 alert icmp any any -> any any (itype:8; icode:0; msg:"r9 ping";)
 ```
 
-Each row is a single Snort rule and it consists of two parts: rule header and rule body. The rule header includes action, protocol, IP addresses, port numbers, and direction of packets. The action indicates how Snort should work when an incoming packet is matched with a certain rule. For example, if the action is `alert`, Snort prints out a message in a console.
-The rule body defines various options, such as the `msg` that should be printed when matching a rule, and specific packet fields (e.g., flags, itype) and payload (i.e., content).
+Each row is a single Snort rule and it consists of two parts: **rule header** and **rule body**. 
+
+The **rule header** includes action, protocol, IP addresses, port numbers, and direction of packets. The action indicates how Snort should work when an incoming packet is matched with a certain rule. For example, if the action is `alert`, Snort prints out a message in a console.
+
+
+The **rule body** defines various options, such as the `msg` that should be printed when matching a rule, and specific packet fields (e.g., flags, itype) and payload (i.e., content).
 It's important to note that except for the `msg` field, others indicate the packet fields. Also, your NIDS should take an action only if both the rule header and rule body are matched. For example, the following rule should be taken when a TCP packet whose destination port is 80 and its payload contains the string "GET".
 
 ```
