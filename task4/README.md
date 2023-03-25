@@ -1,6 +1,6 @@
 # Task 4: Implementing a simple NIDS
 
-In our class, we've learned that NIDS (Network Intrusion Detection System) is used for detecting malicious traffic in practice and some open-source NIDSs, such as Snort and Zeek. In this task, we will implement a Snort-like NIDS to understand how it works.
+In our class, we've learned that NIDS (Network Intrusion Detection System) is used for detecting malicious traffic in practice and some open-source NIDSs are widely used. In this task, we will implement a Snort-like NIDS to understand how it works.
 
 
 # Requirement
