@@ -81,5 +81,5 @@ You can use any tool for writing, such as Word and 아래아한글, but you must
 ## Submission
 
 After finishing this lab, you need to compress the **contents** of this directory with your **report** before submission.
-The compressed file should be `lab1_your_student.number.zip`.
+The compressed file should be `lab1_your_student_number.zip`.
 You must submit your file to KLAS.
