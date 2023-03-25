@@ -7,9 +7,9 @@ In our class, we've learned that NIDS (Network Intrusion Detection System) is us
 
 We will develop a simple NIDS that reads a Snort rule file and parses it to extract detection policies. 
 It should operate with three steps:
-1. Parse a Snort rule file and generate a rule set
-2. Capture an incoming packet and match it with the rules
-3. Print a message if a packet is matched. 
+1. Parse a Snort rule file and generate a rule set.
+2. Parse an incoming packet and match it with the rule set.
+3. Print a message if matched.
 
 For example, if you type the following command:
 
@@ -47,7 +47,41 @@ It's important to note that except for the `msg` field, others indicate specific
 alert tcp any any -> any 80 (content:"GET"; msg:"r5 HTTP GET message";)
 ```
 
-For further information about the Snort rule syntax, please refer to the [Snort official document](https://docs.snort.org/rules/).
+For more information about the Snort rule syntax, please refer to the [Snort official document](https://docs.snort.org/rules/).
+
+## Parsing Packets  
+
+Your NIDS should captures an incoming a packet and analyzes its headers and payload. Packet capturing and parsing are not a easy task if we only use pure Python code. So, we utilize [Scapy](https://scapy.net/), a powerful packet manipulation tool that allows us to develop those code very easily.
+
+In order to use Scapy, we need to import Scapy library:
+
+```
+from scapy.all import *
+```
+
+If we want to capture a packet, we can use `sniff()`:
+
+```
+sniff(iface='eth0', prn=lambda p: parse_packet(p), filter='ip')
+```
+
+The above code captures all packets detected at the interface `eth0` (inside the container). Note that we use the `prn` option, so whenever a packet `p` is captured, it invokes `parse_packet()`, which is the method we'll implement. `filter='ip'` indicates that we'll only see IP packets.
+
+When a packet is captured, we need to parse it to extract its information. We can utilize Scapy again to do so very easily.
+For example, see the following code:
+
+```
+# Assume that the packet variable is `packet` and the captured packet is TCP packet.
+ip = packet[IP]
+print(f"{ip.src}, {ip.dst})
+tcp = packet[TCP]
+print(f"{tcp.sport}, {tcp.dport})
+```
+
+The above code extracts IP and TCP headers from the capture packet and accesses its fields.
+For more information, see [this document](https://scapy.readthedocs.io/en/latest/usage.html#starting-scapy).
+
+## Printing Messages
 
 If an incoming packet is matched with one of Snort rules, your NIDS must print out a message. The message should follow the following format
 
