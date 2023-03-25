@@ -1,6 +1,6 @@
 # Network Security Lab #1
 
-## Due Date: 2023 April 7
+## Due Date: 2023 April 15
 
 In this lab, we will implement simple network scanners and NIDS to understand how they work more intuitively. As previously mentioned, we will use Python 3 in order to quickly build and run network applications.
 
