@@ -63,7 +63,7 @@ When testing network programs, you may want to see how actual packets look like 
 $ tcpdump -i lo -n
 ```
 
-The above command will capture and display all packets involved the interface `lo` whose IP address is "127.0.0.1".
+The above command will capture and display all packets involved in the interface `lo` whose IP address is "127.0.0.1".
 
 ### vi
 
