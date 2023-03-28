@@ -4,7 +4,7 @@
 
 In this lab, we will implement simple network scanners and NIDS to understand how they work more intuitively. As previously mentioned, we will use Python 3 in order to quickly build and run network applications.
 
-This repository has four subdirectories, each of which corresponds to an individual task. Please read the following descriptions carefully before you start this lab.
+This repository has four subdirectories, each of which corresponds to an individual task. Please read the following descriptions carefully before you get started.
 
 ## Installing and Running Docker
 
