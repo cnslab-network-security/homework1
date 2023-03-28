@@ -15,5 +15,5 @@ try:
         if not response: break
         print(response.decode())
 except:
-    s.close()
+    socket.close()
 
